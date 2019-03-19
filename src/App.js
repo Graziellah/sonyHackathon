@@ -56,6 +56,7 @@ class App extends Component {
                     <img src={logo}></img>
                  </div>
                 <a class="item">Accueil</a>
+                <Link to="/">Accueil</Link>
                 <a href="https://www.sonymusic.fr/"class="item">Sony Music</a>
                 <a href="https://www.sony.net/" class="item">Sony</a>
             </div>
