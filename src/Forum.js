@@ -3,7 +3,7 @@ import man from './assets/1.jpeg'
 import woman from './assets/2.jpeg'
 import man2 from './assets/M1.jpg'
 import woman2 from './assets/4.jpeg'
-import { Icon, Card, Header, Label } from 'semantic-ui-react'
+import { Icon, Card, Header, Label, Button } from 'semantic-ui-react'
 import { AST_IterationStatement } from 'terser';
 
 const mateList = [
@@ -138,10 +138,21 @@ export default class Forum extends Component {
                 <div>
                     sexe: {artist.sexe}
                     <Icon name={isWoman ? 'woman': 'man'} disable={artist.auteur}/><br/>
-                    <Icon name='instagram' disable={artist.auteur}/>
-                    <Icon name='chart pie' disable={artist.interprete}/>
-                    <Icon name='music' disable={artist.compositeur}/>
-
+                    <div>
+                        <Icon name='instagram' disabled={false}/>
+                        <Icon name='instagram' disabled={false}/>
+                        <Icon name='instagram' disabled={true}/>
+                    </div>
+                    <div>
+                        <Icon name='chart pie' disabled={false}/>
+                        <Icon name='chart pie' disabled={false}/>
+                        <Icon name='chart pie' disabled={true}/>
+                    </div>
+                    <div>
+                        <Icon name='music' disabled={false}/>
+                        <Icon name='music' disabled={true}/>
+                        <Icon name='music' disabled={true}/>
+                    </div>
                 </div>
             )
 
@@ -182,9 +193,11 @@ export default class Forum extends Component {
             <div>
                 FORUM
                 <Header>Informations envoyées par mail</Header>
-                <Card.Group>
+                <Card.Group centered>
                     {displayArtist}
                 </Card.Group>
+                <Button onClick={()=>{this.props.history.push('/select')}}>Groupe crée</Button>
+
             </div>
         )
       
