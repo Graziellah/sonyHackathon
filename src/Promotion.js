@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import { Grid, Menu, Segment, Image, Icon, Input, Card, Feed} from 'semantic-ui-react'
+import { Grid, Menu, Segment, Image, Icon, Input, Card, Feed, Button} from 'semantic-ui-react'
 import dashbord from './assets/dashBord.png'
 import bitmoji from './assets/IMG_1999.PNG'
 
@@ -50,8 +50,7 @@ export default class Promotion extends Component {
                         <Icon name="reply"/>Répondre
                 </div>)
                 break;
-<<<<<<< HEAD
-            case'reseaux':
+            case'réseaux':
                 displayText = (
                     <div>
                         {CardExampleCardProps()}
@@ -73,13 +72,11 @@ export default class Promotion extends Component {
                         </Feed>
                     </div>
                 )
-=======
-            case'réseaux':
->>>>>>> 52f3633b8fdfc0ab66287d4d01488463b4b7bc98
                 break;
             case'comment':
                 break;
             case'evaluation':
+                displayText = <Button style={{margin:'auto'}} onClick={()=>{this.props.history.push('/vote')}}>Evaluer les autres équipes</Button>
                 break;
             default:
                 break;
