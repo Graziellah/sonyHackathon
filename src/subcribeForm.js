@@ -2,11 +2,26 @@ import React , { Component } from 'react';
 import {Button, Input, Checkbox, Segment, Breadcrumb} from 'semantic-ui-react'
 
 const fields = [
-    'Nom',
-    'Prénom',
-    'Age',
-    'Adresse',
-    'Code postal',
+    {
+        name:'Nom',
+        value: 'Foule'
+    },
+    {
+        name:'Prénom',
+        value:'Valérie'
+    },
+    {
+        name:'Age',
+        value:'24'
+    },
+    {
+        name:'Adress',
+        value:'96 boulevard Bessière'
+    },
+    {
+        name:'Code Postal',
+        value:'75017'
+    }
 ]
 
 export default class SuscribeForm extends Component {
@@ -41,7 +56,7 @@ export default class SuscribeForm extends Component {
 
     personalityTest(question){
         const array  = [
-            <Checkbox radio />,
+            <Checkbox radio className={'first'}/>,
             <Checkbox radio/>,
             <Checkbox radio/>,
             <Checkbox radio/>,
@@ -60,9 +75,9 @@ export default class SuscribeForm extends Component {
         return(
            <div>
                {question}<br/>
-               <span style={{color:'green'}}>D'accord</span>
+               <span style={{color:'green', margin:'5px'}}>D'accord</span>
                {array}
-               <span style={{color:'red'}}>Pas d'accord</span>
+               <span style={{color:'red', margin:'5px'}}>Pas d'accord</span>
            </div>
         )
     }
@@ -71,8 +86,8 @@ export default class SuscribeForm extends Component {
         const fieldsList =  fields.map((field, key) =>{
             return (
                 <div key={key}>
-                    {field}<br/>
-                    <Input />
+                    {field.name}<br/>
+                    <Input value={field.value}/>
                 </div>
              
             )
@@ -91,7 +106,6 @@ export default class SuscribeForm extends Component {
             case 2:
                 formToDisplay = (<div>
                 
-                Test de  personalité
                     {this.personalityTest('Pour vous, être organisé(e) est plus important qu’être flexible.')}
                     {this.personalityTest('Vous considérez votre esprit comme plus pratique que créatif.')}
                     {this.personalityTest('Votre humeur peut changer très rapidement.')}

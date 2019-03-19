@@ -33,10 +33,10 @@
     transform: rotate(360deg);
   }
 }
-.ui.checkbox label:before{
-  border:red 1px solid;
-  width: 50px;
-  height: 50px; 
+.ui.checkbox label :before .first{
+    border:red 1px solid;
+    width: 50px;
+    height: 50px; 
 }
 
 h1 {

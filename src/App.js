@@ -11,9 +11,8 @@ import Forum from './Forum'
 import Promotion from './Promotion'
 import createBrowserHistory from "history/createBrowserHistory";
 import SelectArtist from './SelectArtist';
-import Vote from './Vote'
 import logo from './assets/logo.png';
-
+import Vote from './Vote'
 
 const history = createBrowserHistory()
 
@@ -55,8 +54,7 @@ class App extends Component {
                 <div class="item">
                     <img src={logo}></img>
                  </div>
-                <a class="item">Accueil</a>
-                <Link to="/">Accueil</Link>
+                <a class="item"><Link to="/" style={{color:'black'}}>Accueil</Link></a>
                 <a href="https://www.sonymusic.fr/"class="item">Sony Music</a>
                 <a href="https://www.sony.net/" class="item">Sony</a>
             </div>
