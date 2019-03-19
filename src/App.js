@@ -11,13 +11,10 @@ import Forum from './Forum'
 import Promotion from './Promotion'
 import createBrowserHistory from "history/createBrowserHistory";
 import SelectArtist from './SelectArtist';
-<<<<<<< HEAD
 import Vote from './Vote'
-=======
 import logo from './assets/logo.png';
 
 
->>>>>>> 6f84c23a1cf5a2081772045e59e0f7b4eef5b094
 const history = createBrowserHistory()
 
 function About() {
