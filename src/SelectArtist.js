@@ -1,9 +1,9 @@
 import React , { Component } from 'react';
 import {Icon, Card, CardGroup, Header, Segment} from 'semantic-ui-react'
-import man from './assets/1.jpeg'
-import woman from './assets/2.jpeg'
-import man2 from './assets/3.jpeg'
-import woman2 from './assets/4.jpeg'
+import man from './assets/IMG_1998.PNG'
+import woman from './assets/ilarbi.png'
+import man2 from './assets/IMG_3205.png'
+import woman2 from './assets/ilarbi2.png'
 
 const artistList = [
     {
@@ -152,7 +152,7 @@ const artistList = [
     },
     {
         nom:'Moustapha',
-        sexe:'F',
+        sexe:'M',
         auteur:true,
         compositeur:true,
         interprete:false,
@@ -246,11 +246,12 @@ export default class SelectArtist extends Component {
         })
 
         return(
-            <CardGroup>
-              <Header>Veuillez sélectionner un artiste.</Header>
-
-                {displayArtist}
-            </CardGroup>
+            <div>
+                <Header>Veuillez sélectionner un artiste.</Header>
+                <CardGroup centered> 
+                    {displayArtist}
+                </CardGroup>
+            </div>
         )
       
     }

@@ -3,9 +3,9 @@ import { Icon, Button , Header, Card, Segment} from 'semantic-ui-react';
 
 const roleDescriptions = [
     {
-        role:'Directerur artistique',
+        role:'Directeur artistique',
         icon:'music',
-        text:"Si tu sais dénicher des talents, tu es ouvert d'esprit, que tu sais te mettre à la place de l'artiste.Tu sais conveincre, analyser, tu aimes participer ax concerts de tes artistes et que tu as beaucoup de contact.",
+        text:"Si tu sais dénicher des talents, que tu es ouvert(e) d'esprit et que tu sais te mettre à la place de l'artiste. Tu sais convaincre, analyser, tu aimes participer aux concerts de tes artistes et tu as beaucoup de contacts.",
         evaluation:[
             <div>
                 <Icon name='music' disabled={false}/>
@@ -18,7 +18,7 @@ const roleDescriptions = [
     {
         role:'Audience developer',
         icon:'instagram',
-        text:"Tu mets en application la stratégie marketing en gérant le contenu de ton artiste sur les plateformes correspondant au public cible de ton artiste",
+        text:"Tu mets en application la stratégie marketing en gérant le contenu de ton artiste sur les plateformes correspondant au public cible de ton artiste.",
         evaluation:[
             <div>
                 <Icon name='instagram' disabled={false}/>
@@ -30,7 +30,7 @@ const roleDescriptions = [
     {
         role:'Marketing',
         icon:'chart pie',
-        text:"créatif, visuel, tu as beaucoup de contacts pour promouvoir l'artiste, tu suis les tendances et sais quelle stratégie adopter pour le mettre en valeur et donnes une estimation du budget et du temps nécessaires à l'accomplissement de chaque tâche.",
+        text:"Créatif(ve), visuel(le), tu as beaucoup de contacts pour promouvoir l'artiste, tu suis les tendances et sais quelle stratégie adopter pour le/la mettre en valeur, tu sais donner une estimation des budget et temps nécessaires à l'accomplissement de chaque tâche.",
         evaluation: [
             <div>
                 <Icon name='chart pie' disabled={false}/>

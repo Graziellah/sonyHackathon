@@ -13,6 +13,7 @@ import createBrowserHistory from "history/createBrowserHistory";
 import SelectArtist from './SelectArtist';
 import logo from './assets/logo.png';
 import Vote from './Vote'
+import Correction from './Correction'
 
 const history = createBrowserHistory()
 
@@ -45,7 +46,7 @@ class App extends Component {
 
     return (
     <Router history={history}>
-        <div className="App" style={{backgroundColor:"#303030",height:'2000px', position:'relative'}}>
+        <div className="App" style={{backgroundColor:"#303030",height:'5000px', position:'relative'}}>
         <div style={{backgroundColor:"black",height:'2em', width:'100%', color:'white', textAlign:'right', position:'absolute', marginBottom:'10px', display:'block'}}>
             <img src={sony} style={{width:'3%', marginRight:'25%', marginTop:'0.35%'}}></img>
         </div>
@@ -67,7 +68,7 @@ class App extends Component {
           <Route path="/select" component={SelectArtist} />
           <Route path="/promotion" component={Promotion} />
           <Route path='/vote' component={Vote}/>
-
+          <Route path='/correction' component={Correction} />
         </div>
         </div>
       </Router>
