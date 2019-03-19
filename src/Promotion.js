@@ -46,10 +46,11 @@ export default class Promotion extends Component {
                         <Icon name='mail'/>
                         <h1>"SLAVERY WAS A CHOICE"</h1>
                         <iframe src="https://giphy.com/embed/CycIvRahkUp0Y" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kanye-gotcha-CycIvRahkUp0Y">via GIPHY</a></p>
-                        Vous artiste à donner une interview qui s'est mal passée.<br/>
+                        Vous artiste a donné une interview qui s'est mal passée.<br/><br />
                         <Icon name="reply"/>Répondre
                 </div>)
                 break;
+<<<<<<< HEAD
             case'reseaux':
                 displayText = (
                     <div>
@@ -72,6 +73,9 @@ export default class Promotion extends Component {
                         </Feed>
                     </div>
                 )
+=======
+            case'réseaux':
+>>>>>>> 52f3633b8fdfc0ab66287d4d01488463b4b7bc98
                 break;
             case'comment':
                 break;
@@ -87,7 +91,7 @@ export default class Promotion extends Component {
             <Menu fluid vertical tabular>
                 <Menu.Item name='dashbord' active={activeItem === 'dashbord'} onClick={this.handleItemClick} />
                 <Menu.Item name='message' active={activeItem === 'message'} onClick={this.handleItemClick} />
-                <Menu.Item name='reseaux' active={activeItem === 'reseaux'} onClick={this.handleItemClick} />
+                <Menu.Item name='réseaux' active={activeItem === 'réseaux'} onClick={this.handleItemClick} />
 
                 <Menu.Item
                 name='comment'

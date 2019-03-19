@@ -60,7 +60,7 @@ export default class Results extends Component {
                <Header> Voici les résulats du test de personnalité.</Header>
                 <Icon name='people'/>
                 <Segment>
-                    <Card.Group>
+                    <Card.Group centered>
                         {
                             roleDescriptions.map((elem, key) =>{
                                 return (
