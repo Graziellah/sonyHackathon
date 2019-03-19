@@ -239,6 +239,7 @@ export default class SelectArtist extends Component {
                     image={isWoman ? womanUrl : manUrl}
                     header={artist.nom}
                     meta={meta}
+                    onClick={()=>{this.props.history.push('/promotion')}}
                     description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
                 />
             )

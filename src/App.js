@@ -50,7 +50,7 @@ class App extends Component {
         <div style={{backgroundColor:"black",height:'2em', width:'100%', color:'white', textAlign:'right', position:'absolute', marginBottom:'10px', display:'block'}}>
             <img src={sony} style={{width:'3%', marginRight:'25%', marginTop:'0.35%'}}></img>
         </div>
-        <div style={{marginRight:'auto',marginLeft:'auto', height:'100%', width:'50%', backgroundColor:'white', display:'block', position:'relative', top:'2em'}}>
+        <div style={{marginRight:'auto',marginLeft:'auto', height:'100%', width:'70%', backgroundColor:'white', display:'block', position:'relative', top:'2em'}}>
         <div class="ui stackable menu">
                 <div class="item">
                     <img src={logo}></img>

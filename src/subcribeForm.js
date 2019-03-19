@@ -56,7 +56,7 @@ export default class SuscribeForm extends Component {
 
     personalityTest(question){
         const array  = [
-            <Checkbox radio className={'first'}/>,
+            <Checkbox radio />,
             <Checkbox radio/>,
             <Checkbox radio/>,
             <Checkbox radio/>,
@@ -66,15 +66,15 @@ export default class SuscribeForm extends Component {
         ]
         const displayArray = array.map((elem, key)=>{
             return(
-                <div style={{borderColor:'red'}}>
+                <div style={{borderColor:'red', margin:'10px'}}>
                     {elem}
                 </div>
             )
         })    
         
         return(
-           <div>
-               {question}<br/>
+           <div style={{margin:'10px'}}>
+               <h3>{question}</h3>
                <span style={{color:'green', margin:'5px'}}>D'accord</span>
                {array}
                <span style={{color:'red', margin:'5px'}}>Pas d'accord</span>
@@ -97,7 +97,7 @@ export default class SuscribeForm extends Component {
             case 1:
                 formToDisplay = (<div>
                 
-                    {fieldsList}
+                    {fieldsList}<br/>
 
                     {this.button(1, 'Précedent')}
                     {this.button(1, 'Suivant')}

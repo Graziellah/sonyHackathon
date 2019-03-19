@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import { Grid, Menu, Segment, Image, Icon} from 'semantic-ui-react'
+import { Grid, Menu, Segment, Image, Icon, Input} from 'semantic-ui-react'
 import dashbord from './assets/dashBord.png'
 
 export default class Promotion extends Component {
@@ -19,14 +19,17 @@ export default class Promotion extends Component {
             case'message':
                 displayText = (<div>
                         <Icon name='mail'/>
-                        Vous artiste à donner une interview qui s'est mal passée.
+                        <h1>"SLAVERY WAS A CHOICE"</h1>
+                        <iframe src="https://giphy.com/embed/CycIvRahkUp0Y" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kanye-gotcha-CycIvRahkUp0Y">via GIPHY</a></p>
+                        Vous artiste à donner une interview qui s'est mal passée.<br/>
+                        <Icon name="reply"/>Répondre
                 </div>)
                 break;
             case'reseaux':
                 break;
             case'comment':
                 break;
-            case'links':
+            case'evaluation':
                 break;
             default:
                 break;
@@ -46,8 +49,8 @@ export default class Promotion extends Component {
                 onClick={this.handleItemClick}
                 />
                 <Menu.Item
-                name='links'
-                active={activeItem === 'links'}
+                name='evaluation'
+                active={activeItem === 'evaluation'}
                 onClick={this.handleItemClick}
                 />
             </Menu>
