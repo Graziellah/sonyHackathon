@@ -19,9 +19,7 @@ export default class Home extends Component {
     render(){  
         console.log('this.props.history', this.props) 
         return(
-            <div>
-               <h1 style={{color:'white', backgroundColor:'red', fontSize:'50px'}}>BIENVENUE A LA SONY MUSIC TALENT FACTORY.</h1>
-                Soyez celui qui fera la différence.
+            <div class="home">
                <Segment placeholder>
                 <Grid columns={2} stackable textAlign='center'>
                     <Divider vertical>Or</Divider>
