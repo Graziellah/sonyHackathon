@@ -1,19 +1,50 @@
 import React , { Component } from 'react';
 import man from './assets/1.jpeg'
 import woman from './assets/2.jpeg'
-import man2 from './assets/3.jpeg'
+import man2 from './assets/M1.jpg'
 import woman2 from './assets/4.jpeg'
-import { Icon, Card, Header } from 'semantic-ui-react'
+import { Icon, Card, Header, Label } from 'semantic-ui-react'
+import { AST_IterationStatement } from 'terser';
 
 const mateList = [
     {
-        nom:'annie',
+        nom:'Annie',
         sexe:'F',
         auteur:true,
         compositeur:true,
         interprete:false,
-        picture:'src',
-        musique:''
+        picture:'https://cdn.intra.42.fr/users/medium_ilarbi.jpg',
+        musique:'',
+        tags:[
+            {   
+                label:'Photoshop',
+                icon:'photo'
+            },
+            {   
+                label:'Jazz',
+                icon:'music'
+            },
+            {   
+                label:'Techno',
+                icon:'music'
+            },
+            {  
+                label:'Audiophile',
+                icon:'heart'
+            },
+            {   
+                label:'MAO',
+                icon:'pencil'
+            },
+            {   
+                label:'Visuel',
+                icon:'eye'
+            },
+            {   
+                label:'Creatif',
+                icon:'paint brush'
+            },
+        ]
     },
     {
         nom:'Marc',
@@ -21,17 +52,69 @@ const mateList = [
         auteur:true,
         compositeur:true,
         interprete:false,
-        picture:'src',
-        musique:''
+        picture:'https://cdn.intra.42.fr/users/medium_afrangio.jpg',
+        musique:'',
+        tags:[
+            {   
+                label:'Piano',
+                icon:'photo'
+            },
+            {   
+                label:'Guitare',
+                icon:'music'
+            },
+            {   
+                label:'Concert',
+                icon:'music'
+            },
+            {  
+                label:'Network',
+                icon:'heart'
+            },
+            {   
+                label:'MAO',
+                icon:'pencil'
+            },
+            {   
+                label:'Illustrator',
+                icon:'eye'
+            },
+        ]
     },
     {
-        nom:'Paul',
-        sexe:'M',
+        nom:'Laura',
+        sexe:'F',
         auteur:true,
         compositeur:true,
         interprete:false,
-        picture:'src',
-        musique:''
+        picture:'https://cdn.intra.42.fr/users/medium_ghippoda.jpg',
+        musique:'',
+        tags:[
+            {   
+                label:'Créatif',
+                icon:'paint brush'
+            },
+            {   
+                label:'Visuel',
+                icon:'film'
+            },
+            {   
+                label:'Electro',
+                icon:'music'
+            },
+            {  
+                label:'Social Media',
+                icon:'linkify'
+            },
+            {   
+                label:'Marketing',
+                icon:'chart'
+            },
+            {   
+                label:'Instagram',
+                icon:'instagram'
+            },
+        ]
     }
 ]
 
@@ -72,12 +155,26 @@ export default class Forum extends Component {
                 countM = !countM
 
             }
+            let description ='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+            if(artist.tags){
+                description = artist.tags.map((tag, key)=>{
+                    return (
+                        <Label color='yellow' style={{margin:'5px'}}>
+                            <Icon name={tag.icon}/>
+                            {tag.label}
+                        </Label>
+                    )
+                })
+            }
+            const contact = <div><Icon name='talk'/> Contacter {artist.nom}</div>
+
             return(
                 <Card key={key}
-                    image={isWoman ? womanUrl : manUrl}
+                    image={artist.picture}
                     header={artist.nom}
                     meta={meta}
-                    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+                    description={description}
+                    extra={contact}
                 />
             )
         })
