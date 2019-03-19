@@ -4,13 +4,20 @@ import Sound from 'react-sound';
 import soundFile from './sound/silverman-ft-warped-telman-dous.mp3';
 import SuscribeForm from './subcribeForm';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import sony from './assets/sony.png';
 import Home from './Home'
 import Results from './Results'
 import Forum from './Forum'
 import Promotion from './Promotion'
 import createBrowserHistory from "history/createBrowserHistory";
 import SelectArtist from './SelectArtist';
+<<<<<<< HEAD
 import Vote from './Vote'
+=======
+import logo from './assets/logo.png';
+
+
+>>>>>>> 6f84c23a1cf5a2081772045e59e0f7b4eef5b094
 const history = createBrowserHistory()
 
 function About() {
@@ -33,7 +40,7 @@ class App extends Component {
   // Retrieves the list of items from the Express app
   getList = () => {
     fetch('/api/getList')
-    .then(res => res.json())
+    // .then(res => res.json())
     .then(list => this.setState({ list }))
   }
 
@@ -42,11 +49,21 @@ class App extends Component {
 
     return (
     <Router history={history}>
-        <div className="App" style={{backgroundColor:"#303030",height:'1000px', position:'relative'}}>
+        <div className="App" style={{backgroundColor:"#303030",height:'2000px', position:'relative'}}>
         <div style={{backgroundColor:"black",height:'2em', width:'100%', color:'white', textAlign:'right', position:'absolute', marginBottom:'10px', display:'block'}}>
-            <span style={{marginRight:'10%'}}>SONY</span>
+            <img src={sony} style={{width:'3%', marginRight:'25%', marginTop:'0.35%'}}></img>
         </div>
-        <div style={{marginRight:'auto',marginLeft:'auto', width:'70%', backgroundColor:'white', height:'1000px', display:'block', position:'relative', top:'2em'}}>
+        <div style={{marginRight:'auto',marginLeft:'auto', height:'100%', width:'50%', backgroundColor:'white', display:'block', position:'relative', top:'2em'}}>
+        <div class="ui stackable menu">
+                <div class="item">
+                    <img src={logo}></img>
+                 </div>
+                <a class="item">Accueil</a>
+                <a href="https://www.sonymusic.fr/"class="item">Sony Music</a>
+                <a href="https://www.sony.net/" class="item">Sony</a>
+            </div>
+        <h1 style={{color:'white', backgroundColor:'red'}}>BIENVENUE A LA SONY MUSIC TALENT FACTORY.</h1>
+                <p>SOYEZ CELUI QUI FERA LA DIFFÉRENCE.</p>
           <Route exact path="/" component={Home} />
           <Route path="/form" component={SuscribeForm} />
           <Route path="/results" component={Results} />
