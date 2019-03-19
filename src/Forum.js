@@ -195,7 +195,7 @@ export default class Forum extends Component {
                 <Header>Informations envoyées par mail</Header>
                 <Card.Group centered>
                     {displayArtist}
-                </Card.Group>
+                </Card.Group><br/>
                 <Button onClick={()=>{this.props.history.push('/select')}}>Groupe crée</Button>
 
             </div>
