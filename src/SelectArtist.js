@@ -246,7 +246,8 @@ export default class SelectArtist extends Component {
 
         return(
             <CardGroup>
-              <Header>Veuillez sélectionner un artiste.</Header><br/><br/>
+              <Header>Veuillez sélectionner un artiste.</Header>
+                
                 {displayArtist}
             </CardGroup>
         )

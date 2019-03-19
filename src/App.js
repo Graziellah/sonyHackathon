@@ -11,6 +11,7 @@ import Forum from './Forum'
 import Promotion from './Promotion'
 import createBrowserHistory from "history/createBrowserHistory";
 import SelectArtist from './SelectArtist';
+import Vote from './Vote'
 import logo from './assets/logo.png';
 
 
@@ -66,6 +67,7 @@ class App extends Component {
           <Route path="/forum" component={Forum} />
           <Route path="/select" component={SelectArtist} />
           <Route path="/promotion" component={Promotion} />
+          <Route path='/vote' component={Vote}/>
 
         </div>
         </div>
