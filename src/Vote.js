@@ -31,6 +31,11 @@ export default class Vote extends Component {
     
         )
     }
+
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
+
     render(){
         return(
         <Segment.Group>

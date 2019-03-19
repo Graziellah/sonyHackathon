@@ -49,6 +49,10 @@ export default class Results extends Component {
         step:1,
         }
     }
+
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     
     render(){
           return(

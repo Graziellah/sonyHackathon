@@ -1,13 +1,38 @@
 import React , { Component } from 'react';
-import { Grid, Menu, Segment, Image, Icon, Input} from 'semantic-ui-react'
+import { Grid, Menu, Segment, Image, Icon, Input, Card, Feed, Button} from 'semantic-ui-react'
 import dashbord from './assets/dashBord.png'
+import bitmoji from './assets/IMG_1999.PNG'
+
+const extra = (
+    <a>
+      <Icon name='user' />
+      16 Friends
+    </a>
+  )
+  const comment = (<div>
+      Concert demain à l'accors hotel arena<br/>
+      <strong>#wwf #greenPeace #genereux</strong>
+  </div>)
+  
+  const CardExampleCardProps = () => (
+    <Card
+      image={bitmoji}
+      header='Elliot Baker'
+      meta='Friend'
+      description={comment}
+      extra={extra}
+    />
+  )
 
 export default class Promotion extends Component {
     state = { activeItem: 'dashbord' }
             
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-    
+
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     render() {
         const { activeItem } = this.state
     
@@ -26,10 +51,32 @@ export default class Promotion extends Component {
                 </div>)
                 break;
             case'réseaux':
+                displayText = (
+                    <div>
+                        {CardExampleCardProps()}
+                        <Feed>
+                            <Feed.Event>
+                            <Feed.Content>
+                                <Feed.Summary>
+                                <Feed.User>Elliot Fu</Feed.User> added you as a friend
+                                <Feed.Date>1 Hour Ago</Feed.Date>
+                                </Feed.Summary>
+                                <Feed.Meta>
+                                <Feed.Like>
+                                    <Icon name='like' />
+                                    4 Likes
+                                </Feed.Like>
+                                </Feed.Meta>
+                            </Feed.Content>
+                            </Feed.Event>
+                        </Feed>
+                    </div>
+                )
                 break;
             case'comment':
                 break;
             case'evaluation':
+                displayText = <Button style={{margin:'auto'}} onClick={()=>{this.props.history.push('/vote')}}>Evaluer les autres équipes</Button>
                 break;
             default:
                 break;
