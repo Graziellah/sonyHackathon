@@ -39,20 +39,19 @@ export default class Promotion extends Component {
         <Grid >
             <Grid.Column width={4}>
             <Menu fluid vertical tabular>
-                <Menu.Item name='dashbord' active={activeItem === 'dashbord'} onClick={this.handleItemClick} />
-                <Menu.Item name='message' active={activeItem === 'message'} onClick={this.handleItemClick} />
-                <Menu.Item name='réseaux' active={activeItem === 'réseaux'} onClick={this.handleItemClick} />
-
+                <Menu.Item name='réseaux' active={activeItem === 'réseaux'} onClick={this.handleItemClick} /><br />
+                <Menu.Item name='message' active={activeItem === 'message'} onClick={this.handleItemClick} /><br />
+                <Menu.Item name='dashbord' active={activeItem === 'dashbord'} onClick={this.handleItemClick} /><br />
                 <Menu.Item
                 name='comment'
                 active={activeItem === 'comment'}
                 onClick={this.handleItemClick}
-                />
+                /><br />
                 <Menu.Item
                 name='evaluation'
                 active={activeItem === 'evaluation'}
                 onClick={this.handleItemClick}
-                />
+                /><br />
             </Menu>
             </Grid.Column>
     

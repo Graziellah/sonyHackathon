@@ -48,7 +48,7 @@ class App extends Component {
     <Router history={history}>
         <div className="App" style={{backgroundColor:"#303030",height:'5000px', position:'relative'}}>
         <div style={{backgroundColor:"black",height:'2em', width:'100%', color:'white', textAlign:'right', position:'absolute', marginBottom:'10px', display:'block'}}>
-            <img src={sony} style={{width:'3%', marginRight:'25%', marginTop:'0.35%'}}></img>
+            <img src={sony} style={{width:'3%', marginRight:'15.5%', marginTop:'0.35%'}}></img>
         </div>
         <div style={{marginRight:'auto',marginLeft:'auto', height:'100%', width:'70%', backgroundColor:'white', display:'block', position:'relative', top:'2em'}}>
         <div class="ui stackable menu">
@@ -58,9 +58,7 @@ class App extends Component {
                 <a class="item"><Link to="/" style={{color:'black'}}>Accueil</Link></a>
                 <a href="https://www.sonymusic.fr/"class="item">Sony Music</a>
                 <a href="https://www.sony.net/" class="item">Sony</a>
-            </div>
-        <h1 style={{color:'white', backgroundColor:'red'}}>BIENVENUE A LA SONY MUSIC TALENT FACTORY.</h1>
-                <p>SOYEZ CELUI QUI FERA LA DIFFÉRENCE.</p>
+            </div><br/><br/><br/><br/><br/><br/>
           <Route exact path="/" component={Home} />
           <Route path="/form" component={SuscribeForm} />
           <Route path="/results" component={Results} />

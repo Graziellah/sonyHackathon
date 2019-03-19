@@ -95,21 +95,11 @@ export default class SuscribeForm extends Component {
          let formToDisplay = null  
         switch(this.state.step){
             case 1:
-                formToDisplay = (<div>
+                formToDisplay = (<div><br /><br />
                 
-                    {fieldsList}<br/>
-
-                    {this.button(1, 'Précedent')}
-                    {this.button(1, 'Suivant')}
-                </div>)
-                break;
-            case 2:
-                formToDisplay = (<div>
-                
-                    {this.personalityTest('Pour vous, être organisé(e) est plus important qu’être flexible.')}
-                    {this.personalityTest('Vous considérez votre esprit comme plus pratique que créatif.')}
-                    {this.personalityTest('Votre humeur peut changer très rapidement.')}
-                    {this.personalityTest('Être capable de développer un plan et de s’y tenir est la partie la plus importante de chaque projet.')}
+                    {this.personalityTest('Aimes-tu le challenge?')}<br /><br />
+                    {this.personalityTest('Aimes-tu la collectivité ou es-tu solitaire?')}<br /><br />
+                    {this.personalityTest('Es-tu organisé ou aimes-tu travailler sous pression?')}<br /><br />
                     {this.button(2, 'Précédent')}
                     <Button onClick={()=>{this.props.history.push('/results')}}>Résultats</Button>
                 </div>)

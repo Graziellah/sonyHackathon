@@ -191,11 +191,11 @@ export default class Forum extends Component {
         })
         return(
             <div>
-                FORUM
-                <Header>Informations envoyées par mail</Header>
+                Voici les personnes qui vous correspondent.
+                <br/><br/><br/>
                 <Card.Group centered>
                     {displayArtist}
-                </Card.Group>
+                </Card.Group><br/>
                 <Button onClick={()=>{this.props.history.push('/select')}}>Groupe crée</Button>
 
             </div>
