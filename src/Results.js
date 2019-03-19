@@ -57,7 +57,7 @@ export default class Results extends Component {
     render(){
           return(
             <div>
-               <Header> Voici les résulats du test de personnalité.</Header>
+               <p> Voici les résulats du test de personnalité.</p>
                 <Icon name='people'/>
                 <Segment>
                     <Card.Group centered>
@@ -85,7 +85,7 @@ export default class Results extends Component {
                     </Card.Group>
                 </Segment>
                 <div>
-                    Avez-vous une team? <br/><br/>   
+                    <p>Avez-vous une team?</p> <br/><br/>   
                     <Button onClick={()=>{this.props.history.push('/select')}}>Oui</Button> 
                     <Button onClick={()=>{this.props.history.push('/forum')}}>Non</Button>
                 </div>

@@ -191,7 +191,7 @@ export default class Forum extends Component {
         })
         return(
             <div>
-                Voici les personnes qui vous correspondent.
+                <p>Voici les personnes qui vous correspondent.</p>
                 <br/><br/><br/>
                 <Card.Group centered>
                     {displayArtist}

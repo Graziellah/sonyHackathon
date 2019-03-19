@@ -251,7 +251,7 @@ export default class SelectArtist extends Component {
 
         return(
             <div>
-                <Header>Veuillez sélectionner un artiste.</Header>
+                <p>Veuillez sélectionner un artiste.</p>
                 <CardGroup centered> 
                     {displayArtist}
                 </CardGroup>

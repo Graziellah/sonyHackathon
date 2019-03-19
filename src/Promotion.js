@@ -25,7 +25,7 @@ const extra = (
   )
 
 export default class Promotion extends Component {
-    state = { activeItem: 'dashbord' }
+    state = { activeItem: 'réseaux' }
             
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
